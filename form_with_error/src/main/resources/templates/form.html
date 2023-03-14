@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmls:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+</head>
+<body>
+<form th:action="@{/confirm}" method="post"> <!--フォームのポスト先の指定 @{...}はリンク式 localhost:8080/confirmと表示される-->
+<label>
+	message:
+	<input type="text" name="message">
+</label>
+	<button>送信</button> <!--messageの引き渡し-->
+</form>
+</body>
+</html>
