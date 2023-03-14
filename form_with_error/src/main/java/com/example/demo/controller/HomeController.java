@@ -18,13 +18,14 @@ public String index(@ModelAttribute Inquiry inquiry) {
 }
 
 @PostMapping("/")
-public String confirm(@Validated @ModelAttribute Inquiry inquiry,BindingResult result) {
+public String confirm(@Validated @ModelAttribute Inquiry inquiry,BindingResult result) { 
+//@Validatedで入力値のチェック→resultに代入される
 	
-	if(result.hasErrors()) {
-		return "index";
+	if(result.hasErrors()) {　//result(入力値)のエラーチェック
+		return "index";　 //エラーがあればindex.htmlへ
 	}
 	
-	return "confirm";
+	return "confirm"; //なければconfirm.htmlへ
  }
 
 }
