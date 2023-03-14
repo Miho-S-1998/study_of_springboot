@@ -10,13 +10,13 @@ import com.example.demo.model.User;
 @Controller
 public class HomeController {
 	
-	@GetMapping("/form")
-	private String readForm(@ModelAttribute User user) {
+	@GetMapping("/form") 
+	private String readForm(@ModelAttribute User user) {　//@ModelAttribute キー 変数
 		return "form";
 	}
 	 
 	@PostMapping("/form")
-	private String confirm(@ModelAttribute User user) {
+	private String confirm(@ModelAttribute User user) {　//model.addAttributeが不要
 		return "confirm";
 	}
 
