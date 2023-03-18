@@ -9,8 +9,8 @@ import com.example.demo.repository.CommentRepository;
 
 import lombok.RequiredArgsConstructor;
 
-@RequiredArgsConstructor
-@Component
+@RequiredArgsConstructor //コンストラクタを自動生成
+@Component　
 public class DataLoader  implements ApplicationRunner{
 	
 	private final CommentRepository repository;
