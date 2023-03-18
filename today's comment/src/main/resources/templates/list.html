@@ -15,8 +15,7 @@
 
 <br>
 <h3>ログ</h3>
-<div th:each="comment : ${comments}">　<!--繰り返し処理--> 
-	    <!--↑${comments}から1件ずつ取り出してcomment変数に格納-->
+<div th:each="comment : ${comments}">　<!--繰り返し処理⇒${comments}から1件ずつ取り出してcomment変数に格納-->
 	<div>[[${comment.id}]] - [[${comment.content}]]</div>
 </div>
 </body>
