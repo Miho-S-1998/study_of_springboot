@@ -1,7 +1,7 @@
 package com.example.demo.config;
 
 import org.springframework.boot.ApplicationArguments;
-import org.springframework.boot.ApplicationRunner;
+import org.springframework.boot.ApplicationRunner; //SpringBoot起動後に初期処理を実行
 import org.springframework.stereotype.Component;
 
 import com.example.demo.model.Comment;
