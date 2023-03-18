@@ -35,10 +35,10 @@ private String phoneNumber;
 
 @Nonnull
 @Min(1000)
-@NumberFormat(pattern="#,###") 
+@NumberFormat(pattern="#,###") //数値に変換
 private BigDecimal price;
 
 @NotNull
-@DateTimeFormat(iso=ISO.DATE)
+@DateTimeFormat(iso=ISO.DATE)　//日付へ変換
 private LocalDate paymentDeadline;
 }
