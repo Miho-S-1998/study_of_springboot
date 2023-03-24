@@ -15,14 +15,14 @@ import lombok.Setter;
 @Entity
 public class Employee {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)　//キーを自動で作成
 	private Long id;
 	
 	@NotBlank
 	@Size(max=40)
 	private String name;
 	
-	@ManyToOne
+	@ManyToOne　//多対一
 	private Department department;
 	
 
