@@ -25,7 +25,7 @@ public class Department {
  @Size(max=40)
  private String name;
  
- @OneToMany
+ @OneToMany(mappedBy="department")　　//一対多　
  private List<Employee> employee;
  
 }
