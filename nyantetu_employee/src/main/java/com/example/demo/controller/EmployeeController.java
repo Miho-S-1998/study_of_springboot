@@ -22,7 +22,7 @@ public class EmployeeController {
 	
 	@GetMapping("/")
 	public String showList(Model model) {
-		model.addAttribute("employees", repository.findAll());
+		model.addAttribute("employees", repository.findAll()); //データを全て取得
 		return "index";
 	}
 	
@@ -45,13 +45,13 @@ public class EmployeeController {
 	
 	@GetMapping("/edit/{id}")
 	public String editEmployee(@PathVariable Long id, Model model) {
-		model.addAttribute("employee", repository.findById(id));
+		model.addAttribute("employee", repository.findById(id));　//データを1件取得
 		return "form";
 	}
 	
 	@GetMapping("/delete/{id}")
 	public String deleteEmployee(@PathVariable Long id) {
-		repository.deleteById(id);
+		repository.deleteById(id);　//データを削除
 		return "redirect:/";
 	}
 }
