@@ -1,0 +1,3 @@
+for login nyantetu websystem
+・user_name:admin
+・password:password
