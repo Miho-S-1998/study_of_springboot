@@ -7,13 +7,13 @@
 
   <!-- ログインメッセージ -->
   <div th:fragment="login">
-    <div class="alert alert-danger" th:if="${param.error}">
+    <div class="alert alert-danger" th:if="${param.error}">　<!--{param.●●}でパラメータごとにメッセージを表示}-->
       <small>ユーザ名またはパスワードが正しくありません</small>
     </div>
-    <div class="alert alert-success" th:if="${param.register}">
+    <div class="alert alert-success" th:if="${param.register}"> <!--登録情報-->
       <small>ユーザを新規登録しました</small>
     </div>
-    <div class="alert alert-success" th:if="${param.logout}">
+    <div class="alert alert-success" th:if="${param.logout}">   <!--ログアウトメッセージ-->
       <small>ログアウトしました</small>
     </div>
   </div>
