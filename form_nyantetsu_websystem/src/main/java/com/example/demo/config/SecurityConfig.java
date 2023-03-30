@@ -31,7 +31,7 @@ public class SecurityConfig {
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http)throws Exception{
 		http .authorizeHttpRequests(auth->auth
-			 .requestMatchers(PathRequest.toStaticResources().atCommonLocations())
+			 .requestMatchers(PathRequest.toStaticResources().atCommonLocations()) //cssなどへのアクセスを可能にする
 			 .permitAll()
 			 .anyRequest().authenticated()
 			 )
@@ -49,7 +49,7 @@ public class SecurityConfig {
 		    return http.build();
 	}
 	
-	@Bean
+	@Bean　//DBからユーザー情報を検索
 	public UserDetailsService userDetailsService() {
 		return username->{
 		  
