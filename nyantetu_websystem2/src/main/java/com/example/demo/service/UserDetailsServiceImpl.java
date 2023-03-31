@@ -23,7 +23,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 			   .orElseThrow(() -> new UsernameNotFoundException(username+"not found"));
 		  
 		return new User(user.getUsername(),user.getPassword(),
-			    AuthorityUtils.createAuthorityList("ADMIN"));
+			    AuthorityUtils.createAuthorityList(user.getAuthority().name()));
 	}
-
 }
+
